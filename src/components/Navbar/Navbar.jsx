@@ -23,6 +23,11 @@ const Navbar = () => {
       <div className={s.item}>
         <NavLink to="/settings" className={navData => navData.isActive ? s.activeLink : s.item}>Settings</NavLink>
       </div>
+      
+      <div className={s.item}>
+        <NavLink to="/proba" className={navData => navData.isActive ? s.activeLink : s.item}>Settings</NavLink>
+      </div>
+
       <div className={`${s.item} ${s.flex}`}>
         <div className={s.friend}>
            <NavLink to="/friends" className={navData => navData.isActive ? s.activeLink : s.item}>Friends</NavLink> 
