@@ -4,8 +4,7 @@ import * as axios from 'axios';
 import usersPhoto from '../../assets/images/users.jpg'
 
 class Users extends React.Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
     axios
       .get("https://social-network.samuraijs.com/api/1.0/users")
       .then((response) => {
@@ -14,9 +13,28 @@ class Users extends React.Component {
   }
 
   render() {
+
+    let pagesCount = this.props.totalUsersCount / this.props.pageSize;
+
+    let pages = [];
+    for(let i = 0; i < pagesCount; i++) {
+      pages.push(i)
+    }
+
+
     return <div>
     {
     <div>
+      <div>
+        {pages.map((p) => {
+          <span className={true && styles.selectedPage}>{p}</span>
+        })}
+        <span>1</span>
+        <span className={styles.selectedPage}>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+      </div>
       {this.props.users.map((u) => (
         <div key={u.id}>
           <span>
