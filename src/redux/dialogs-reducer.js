@@ -50,32 +50,3 @@ export const updateNewMessageBodyCreator = (body) => ({
 })
     
 export default dialogsReducer
-
-
-// const dialogsReducer = (state = initialState, action) => {
-//   switch(action.type) {
-//       case UPDATE_NEW_MESSAGE_BODY: {    
-//           let stateCopy = {...state};
-//           stateCopy.newMessageBody = action.body;
-//           return stateCopy;
-//         }
-//       case SEND_MESSAGE: {
-
-//           let stateCopy = {...state};
-//           let body = stateCopy.newMessageBody;
-//           stateCopy.newMessageBody = "";
-//           stateCopy.messagesData.push({ id: 7, message: body });
-//           return stateCopy;
-//         }
-//       default:
-//           return state;
-//   }
-// };
-// export const sendMessageCreator = () => ({type: SEND_MESSAGE})
-
-// export const updateNewMessageBodyCreator = (body) => ({ 
-//   type: UPDATE_NEW_MESSAGE_BODY,
-//   body: body
-// })
-
-// export default dialogsReducer
