@@ -44,7 +44,7 @@ let WithUrlDataContainerComponent = function withRouter(Component) {
 export default compose(
   connect (mapStateToProps, {getUserProfile}),
   WithUrlDataContainerComponent,
-  withAuthRedirect
+  // withAuthRedirect
 )(ProfileContainer)
 // export default connect (mapStateToProps, {getUserProfile})(WithUrlDataContainerComponent(AuthRedirectComponent));
 
