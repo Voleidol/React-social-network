@@ -25,9 +25,27 @@ export const usersAPI = {
     },
 
     getProfile(userId) {
+        console.warn('Obsolete method. Please profileAPI.')
+        return profileAPI.getProfile(userId);
+    }
+}
+
+export const profileAPI = {
+    getProfile(userId) {    
         return instance
             .get(`profile/` + userId)
+    },
+
+    getStatus(userId) {
+        return instance
+            .get(`profile/status/` + userId)
+    },
+
+    updateStatus(status) {
+        return instance
+            .put(`profile/status`, {status: status}); //put имеет имеет body (смотреть док API), в отличие от get и delete, которые работают только с query parametrs(параметры через вопросит. знак)
     }
+
 }
 
 export const authAPI = {

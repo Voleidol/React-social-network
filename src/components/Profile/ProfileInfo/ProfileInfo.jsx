@@ -7,7 +7,7 @@ const ProfileInfo = (props) => {
 if(!props.profile) {
   return <Preloader />
 }
-
+  console.log(props.profile)
   return (
     <div>
       {/* <div className={s.imageBack}>
@@ -20,7 +20,7 @@ if(!props.profile) {
       <div className={s.description}>
         <div><img src={props.profile.photos.large} alt="" srcset="" /></div>
         <p>{props.profile.contacts.twitter}</p> 
-        <ProfileStatus status={"Hello"}/>
+        <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
         </div>
     </div>
   );
