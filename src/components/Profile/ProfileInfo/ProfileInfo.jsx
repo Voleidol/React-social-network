@@ -4,10 +4,10 @@ import Preloader from "../../Common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
-if(!props.profile) {
+  
+if (!props.profile) {
   return <Preloader />
 }
-  console.log(props.profile)
   return (
     <div>
       {/* <div className={s.imageBack}>
