@@ -12,6 +12,7 @@ class ProfileContainer extends React.Component {
     let userId = this.props.router.params.userId
     if(!userId) {
       
+      
       // userId = 1049;
       userId = this.props.authorizedUserId;
     }
@@ -52,8 +53,9 @@ let WithUrlDataContainerComponent = function withRouter(Component) {
 }
 
 export default compose(
-  connect (mapStateToProps, {getUserProfile, getStatus, updateStatus}),
   WithUrlDataContainerComponent,
+  connect (mapStateToProps, {getUserProfile, getStatus, updateStatus})
+  // WithUrlDataContainerComponent,
   // withAuthRedirect
 )(ProfileContainer)
 // export default connect (mapStateToProps, {getUserProfile})(WithUrlDataContainerComponent(AuthRedirectComponent));
